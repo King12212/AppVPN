@@ -1,0 +1,347 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#333333"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:id="@+id/title_coin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <ImageView
+            android:id="@+id/back_button"
+            android:padding="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/arrow_back" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fontFamily="@font/robotoblack"
+            android:textSize="16sp"
+            android:text="Sever List"
+            android:textColor="@color/white"
+            android:gravity="center_vertical"
+            android:paddingRight="100dp"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="20dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="#808080"
+            android:padding="15dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/daily_checkin" />
+
+            <TextView
+                android:paddingLeft="40dp"
+                android:gravity="center|left"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/robotomedium"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:text="United State" />
+
+            <ImageView
+                android:id="@+id/us_down"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                app:srcCompat="@drawable/arrow_down"
+                android:onClick="toggleUSContent" />
+            <ImageView
+                android:id="@+id/us_up"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                app:srcCompat="@drawable/arrow_up"
+                android:onClick="toggleUSContent"
+                android:visibility="gone"/>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/us_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone"> <!-- Mặc định ẩn -->
+
+            <!-- Thêm nội dung cho United State ở đây -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="#808080">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="20dp">
+                    <TextView
+                        android:gravity="center"
+                        android:paddingLeft="30dp"
+                        android:paddingRight="92dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:fontFamily="@font/robotoblack"
+                        android:textColor="@color/white"
+                        android:textSize="18sp"
+                        android:text="Los Angeles"/>
+                    <TextView
+                        android:gravity="center"
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:fontFamily="@font/robotoblack"
+                        android:textColor="@color/white"
+                        android:textSize="18sp"
+                        android:text="20%"/>
+                    <ImageView
+                        android:gravity="center"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/wifi"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="20dp">
+                    <TextView
+                        android:gravity="center"
+                        android:paddingLeft="30dp"
+                        android:paddingRight="142dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:fontFamily="@font/robotoblack"
+                        android:textColor="@color/white"
+                        android:textSize="18sp"
+                        android:text="Miami"/>
+                    <TextView
+                        android:gravity="center"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:fontFamily="@font/robotoblack"
+                        android:textColor="@color/white"
+                        android:textSize="18sp"
+                        android:text="35%"/>
+                    <TextView
+                        android:paddingLeft="55dp"
+                        android:gravity="center"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:fontFamily="@font/robotoblack"
+                        android:textColor="@color/white"
+                        android:textSize="18sp"
+                        android:text="100"/>
+                    <ImageView
+                        android:gravity="center"
+                        android:layout_width="wrap_content"
+
+                        android:layout_height="match_parent"
+                        android:src="@drawable/coin"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="40dp">
+                    <TextView
+                        android:gravity="center"
+                        android:paddingLeft="30dp"
+                        android:paddingRight="130dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:fontFamily="@font/robotoblack"
+                        android:textColor="@color/white"
+                        android:textSize="18sp"
+                        android:text="Chicago"/>
+                    <TextView
+                        android:gravity="center"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:fontFamily="@font/robotoblack"
+                        android:textColor="@color/white"
+                        android:textSize="18sp"
+                        android:text="5%"/>
+                    <TextView
+                        android:paddingLeft="62dp"
+                        android:gravity="center"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:fontFamily="@font/robotoblack"
+                        android:textColor="@color/white"
+                        android:textSize="18sp"
+                        android:text="100"/>
+                    <ImageView
+                        android:gravity="center"
+                        android:layout_width="wrap_content"
+
+                        android:layout_height="match_parent"
+                        android:src="@drawable/coin"/>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="20dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="#808080"
+            android:padding="15dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/daily_checkin" />
+
+            <TextView
+               android:paddingLeft="40dp"
+                android:gravity="center|left"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/robotomedium"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:text="United Kingdom" />
+
+            <ImageView
+                android:id="@+id/uk"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                app:srcCompat="@drawable/arrow_down"
+                android:onClick="toggleUKContent"/>
+        </LinearLayout>
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="20dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="#808080"
+            android:padding="15dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/daily_checkin" />
+
+            <TextView
+               android:paddingLeft="40dp"
+                android:gravity="center|left"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/robotomedium"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:text="Germany" />
+
+            <ImageView
+                android:id="@+id/germany"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                app:srcCompat="@drawable/arrow_down"
+                android:onClick="toggleGermanyContent"/>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="20dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="#808080"
+            android:padding="15dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/daily_checkin" />
+
+            <TextView
+               android:paddingLeft="40dp"
+                android:gravity="center|left"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/robotomedium"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:text="Japan" />
+
+            <ImageView
+                android:id="@+id/japan"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                app:srcCompat="@drawable/arrow_down"
+                android:onClick="toggleJapanContent"/>
+        </LinearLayout>
+    </LinearLayout>
+    <!-- United State Content -->
+
+
+    <!-- United Kingdom Content -->
+    <LinearLayout
+        android:id="@+id/uk_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone"> <!-- Mặc định ẩn -->
+
+        <!-- Thêm nội dung cho United Kingdom ở đây -->
+
+
+    </LinearLayout>
+
+    <!-- Germany Content -->
+    <LinearLayout
+        android:id="@+id/germany_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone"> <!-- Mặc định ẩn -->
+
+        <!-- Thêm nội dung cho Germany ở đây -->
+
+    </LinearLayout>
+
+    <!-- Japan Content -->
+    <LinearLayout
+        android:id="@+id/japan_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone"> <!-- Mặc định ẩn -->
+
+        <!-- Thêm nội dung cho Japan ở đây -->
+
+    </LinearLayout>
+
+</LinearLayout>

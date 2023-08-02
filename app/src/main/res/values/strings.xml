@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">App VPN</string>
+    <string name="txt_intro_ads">Reward coins are used to select the serve. \n You will be deducted 100 coins after a connected</string>
+    <string name="txt_to_watch">Do you want to watch the video to get more coin</string>
+</resources>
